@@ -1,6 +1,20 @@
-The only purpose of this file is to practice submitting files
-in the Nand to Tetris course websites in Coursera.
+推送到远端
+git push -u origin master
 
-There is no need to modify the contents of this file.
-All you have to do is submit it as is, following the 
-Project 0 guidelines in the website.
+修改远端url
+git remote set-url [remote] [url]
+
+创建ssh-key
+1.
+$ cd ~/.ssh
+$ ls
+$ mkdir key_backup
+$ cp id_rsa* key_backup
+$ rm id_rsa*
+2.
+ssh-keygen -t rsa -C "uxpi"
+代码参数：
+-t 指定密钥类型，默认是 rsa ，可以省略。
+-C 设置注释文字，比如邮箱。
+3.cat ~/.ssh/id_rsa.pub
+4.复制到setting中ssh key一栏
